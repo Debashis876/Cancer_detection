@@ -20,7 +20,7 @@ def predict():
     df = pd.DataFrame(features_value, columns=features_name)
     prediction = model.predict(df)   
     if prediction == 1:
-        res_val = " breast cancer "
+        res_val = " cancer "
     else:
         res_val = "no breast cancer"
     return render_template('index.html', prediction_text='Patient has  {}'.format(res_val))
